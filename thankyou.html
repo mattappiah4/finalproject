@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link href="matt.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="contact.html">Major Advancement</a></h1>
+    </header>
+    <br>
+    <main>
+        <h2>Thank you for your feedback!!!</h2>
+        <p>Feel free to go back if you need to change something.</p>
+<div id="result"></div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("formData"));
+  if (data) {
+    document.getElementById("result").innerHTML = `
+      <p><strong>Name:</strong> ${data.name}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Improvements:</strong> ${data.message}</p>
+    `;
+  }
+</script>
+<button onclick="history.back()"> BACK </button>
+    </main>
+</body>
+</html>
